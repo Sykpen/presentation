@@ -1,0 +1,502 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+			<section>
+				
+				<img data-src="https://s.dou.ua/img/announces/840-26172371_1731603890243259_8080971932319763408_o.jpg" style="border: none;">
+				<p>
+					<small>Created by <a href="https://github.com/Sykpen">Sergey potapov</a></small>
+				</p>
+			</section>
+
+			<section id="fragments">
+				<h3>My road as a developer</h3>
+				<ol>
+					<li class="fragment">Institute of Busines BSU 2015-2019</li>
+					<li class="fragment">IT academy: Web-site development with HTML,<br> CSS ,JS. 2018</li>
+					<li class="fragment">IT academy: Web-app development on JavaScript 2019-2019</li>
+					<li class="fragment">RSS School 2019 - now</li>
+				</ol>
+			</section>
+
+			<section>
+				<p>What is Framework in a nutshell?</p>
+				<p>Framework is simply a bunch of code which can be called by the programmer without having it to be written explicitly.</p>
+			</section>
+
+			<section>
+			<section data-background="https://www.inovex.de/blog/wp-content/uploads/2022/01/one-year-of-react-native.png"></section>
+			<section><p>Library for creating User Interfaces</p></section>
+			</section>
+			<section>
+					<section><h2>Jobs TuT.by</h2><img data-src="https://i.ibb.co/FgVZyDf/77.jpg"></section>
+					<section><h2>Linked in</h2><img data-src="https://i.ibb.co/Sr3p8BV/88.jpg"></section>
+				</section>
+
+			<section>
+					<h2>Plan:</h2>
+					<ol>
+						<li>History</li>
+						<li>Basics</li>
+						<li>Where to learn and how</li>
+					</ol>
+			</section>
+
+			<section>
+				<h2>Brief history</h2>
+				<p>
+					React is a new technology when compared with other technologies in the market. It came into existence in 2011, when Jordan Walke, a software engineer at Facebook created the library. React is influenced by the likes of XHP which is a simple HTML component framework for PHP. The first use case of React was in Facebook’s newsfeed in 2011. Later on, it is picked up by Instagram to use it in their system. With time, React grew, and Facebook decided to make it open source in May 2013 at JSConf US.
+				</p>
+			</section>
+
+				<section><img  data-src="https://www.meme-arsenal.com/memes/a8b02e70bec1206289f262473d0b8d42.jpg"></section>
+
+				<section>
+					<p>
+						Many young developers don't know what to learn after JS.
+					</p>
+					<img data-src="https://www.meme-arsenal.com/memes/051a1beac23183b263f84490bfa07d5d.jpg">
+				</section>
+
+				<section>
+				<section>
+					<p>NPM downloads</p>
+					<img data-src="https://camo.githubusercontent.com/6ca883e3fc34f6bbc38fdb3ccbd56aa4e77ead44/68747470733a2f2f692e696d6775722e636f6d2f336c77646a6c342e706e67">
+				</section>
+				<section>
+					<p>downloads in 2 years</p>
+					<img data-src="https://camo.githubusercontent.com/081bd0d5924a76869dad528d5a3bd8ce03024717/68747470733a2f2f692e696d6775722e636f6d2f71325a4e584b4a2e706e67">
+				</section>
+				</section>
+				
+				
+				
+				<section><h2>React Basics</h2></section>
+
+				<section>
+					<section>
+					<h2>Meeting JSX</h2>
+					<pre>
+						<code data-trim data-line-numbers="1">
+								const element = <h1>Hello, world!</h1>;
+						</code>
+					</pre>
+					</section>
+					<section>
+						<h2>Embedding Expressions in JSX</h2>
+						<pre>
+							<code data-trim data-line-numbers="1-7">
+								const name = 'Josh Perez';
+									const element = <h1>Hello, {name}</h1>;
+									
+									ReactDOM.render(
+									  element,
+									  document.getElementById('root')
+									);</code>
+						</pre>
+					</section>
+					<section>
+						<aside class="notes">In the example below, we embed the result of calling a JavaScript function, formatName(user), into an <h1> element.</aside>
+						<h2>Example</h2>
+						<pre>
+							<code data-trim data-line-numbers="1-16">
+								function formatName(user) {
+								return user.firstName + ' ' + user.lastName;
+							  }
+							  const user = {
+								firstName: 'Harper',
+								lastName: 'Perez'
+							  };
+							  const element = (
+								<h1>
+								  Hello, {formatName(user)}!
+								</h1>
+							  );
+							  ReactDOM.render(
+								element,
+								document.getElementById('root')
+							  );</code>
+						</pre>
+					</section>
+					<section>
+						<aside class="notes">JSX tags may contain children:</aside>
+						<h2>Children with JSX</h2>
+						<pre>
+							<code data-trim data-line-numbers="1-6">
+								const element = (
+									<div>
+										<h1>Hello!</h1>
+										<h2>Good to see you here.</h2>
+									</div>
+									);
+							</code>
+						</pre>
+					</section>
+					<section>
+						<aside class="notes">
+						Babel compiles JSX down to React.createElement() calls.
+						These two examples are identical:
+						</aside>
+					<h2>JSX Represents Objects</h2>
+					<pre>
+						<code data-trim data-line-numbers="1-5">
+								const element = (
+									<h1 className="greeting">
+									  Hello, world!
+									</h1>
+								  )
+						</code>
+					</pre>
+					<pre>
+						<code data-trim data-line-numbers="1-5">
+								const element = React.createElement(
+									'h1',
+									{className: 'greeting'},
+									'Hello, world!'
+								  );
+						</code>
+					</pre>
+					</section>
+					<section>
+						<aside class="notes">React.createElement() performs a few checks to help you write bug-free code but essentially it creates an object like this:
+								These objects are called “React elements”. You can think of them as descriptions of what you want to see on the screen. React reads these objects and uses them to construct the DOM and keep it up to date.
+						</aside>
+						<pre>
+							<code data-trim data-line-numbers="1-7">
+									const element = {
+										type: 'h1',
+										props: {
+										  className: 'greeting',
+										  children: 'Hello, world!'
+										}
+									  };
+							</code>
+						</pre>
+					</section>
+					<section>
+						<aside class="notes">After compilation, JSX expressions become regular JavaScript function calls and evaluate to JavaScript objects.
+								This means that you can use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions:
+						</aside>
+							<h2>JSX is an Expression Too</h2>
+							<pre>
+								<code data-trim data-line-numbers="1-6">
+									function getGreeting(user) {
+										if (user) {
+										  return <h1>Hello, {formatName(user)}!</h1>;
+										}
+										return <h1>Hello, Stranger.</h1>;
+									  }
+								</code>
+							</pre>
+					</section>
+				</section>
+
+				<section>
+					<h2>Virtual DOM</h2>
+				<p>
+					The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation.
+				</p>
+				</section>
+
+				<section>
+				<section>
+					<h2>React Basics: React component</h2>
+					<p></p>
+				</section>
+				<section>
+					<p>Function and Class Components</p>
+					<p>The simplest way to define a component is to write a JavaScript function</p>
+					<aside class="notes">This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript functions.</aside>
+					<pre>
+						<code data-trim data-line-numbers="1-3">
+								function Welcome(props) {
+									return <h1>Hello, {props.name}</h1>;
+								  }
+						</code>
+					</pre>
+					<p>You can also use an ES6 class to define a component:</p>
+					<pre>
+						<code data-trim data-line-numbers="1-5">
+							class Welcome extends React.Component {
+								render() {
+								  return <h1>Hello, {this.props.name}</h1>;
+								}
+							  }
+						</code>
+					</pre>
+				</section>
+				</section>
+
+				<section>
+				<section>
+					<aside class="notes">Each component has several “lifecycle methods” that you can override to run code at particular times in the process. You can use this lifecycle diagram as a cheat sheet. In the list below, commonly used lifecycle methods are marked as bold. The rest of them exist for relatively rare use cases.</aside>
+					<p>The Component Lifecycle</p>
+					<img data-src="https://i.ibb.co/R4V47Pr/1234.png">
+				</section>
+				<section>
+					<h2>Mounting</h2>
+					<aside class="notes">These methods are called in the following order when an instance of a component is being created and inserted into the DOM:</aside>
+					<ol>
+						<li>constructor()</li>
+						<li>static getDerivedStateFromProps()</li>
+						<li>render()</li>
+						<li>componentDidMount()</li>
+					</ol>
+				</section>
+				<section>
+						<h2>Updating</h2>
+						<aside class="notes">An update can be caused by changes to props or state. These methods are called in the following order when a component is being re-rendered:</aside>
+						<ol>
+							<li>static getDerivedStateFromProps()</li>
+							<li>shouldComponentUpdate()</li>
+							<li>render()</li>
+							<li>getSnapshotBeforeUpdate()</li>
+							<li>componentDidUpdate()</li>
+						</ol>
+				</section>
+				<section>
+						<h2>Unmounting</h2>
+						<aside class="notes">This method is called when a component is being removed from the DOM:</aside>
+						<ol>
+							<li>componentWillUnmount()</li>
+						</ol>
+				</section>
+				<section>
+						<h2>Error handling</h2>
+						<aside class="notes">TThese methods are called when there is an error during rendering, in a lifecycle method, or in the constructor of any child component.</aside>
+						<ol>
+							<li>static getDerivedStateFromError()</li>
+							<li>componentDidCatch()</li>
+						</ol>
+				</section>
+				</section>
+
+				<section><h2>Render()</h2>
+					<p>
+							The render() method is the only required method in a class component.
+							When called, it should examine this.props and this.state and return one of the following types:
+					</p>
+					<ol>
+						<li>React elements. </li>
+						<li>Arrays and fragments.</li>
+						<li>Portals.</li>
+						<li>String and numbers.</li>
+						<li>Booleans or null.</li>
+					</ol>
+					<aside class="notes">The render() method is the only required method in a class component.
+
+							When called, it should examine this.props and this.state and return one of the following types:
+							
+							React elements. Typically created via JSX. For example, <div /> and <MyComponent /> are React elements that instruct React to render a DOM node, or another user-defined component, respectively.
+							Arrays and fragments. Let you return multiple elements from render. See the documentation on fragments for more details.
+							Portals. Let you render children into a different DOM subtree. See the documentation on portals for more details.
+							String and numbers. These are rendered as text nodes in the DOM.
+							Booleans or null. Render nothing. (Mostly exists to support return test && <Child /> pattern, where test is boolean.)
+							The render() function should be pure, meaning that it does not modify component state, it returns the same result each time it’s invoked, and it does not directly interact with the browser.
+							
+							If you need to interact with the browser, perform your work in componentDidMount() or the other lifecycle methods instead. Keeping render() pure makes components easier to think about.</aside>
+				</section>
+
+				<!-- <section>
+					<section><h2>Decomposing</h2>
+					<img data-src="https://miro.medium.com/max/684/1*Wv2y3zzKdLUpjpCNXQ1PBA.png"></section>
+					
+					<section><h2>Lego example react</h2>
+					<img data-src="https://miro.medium.com/max/1598/1*njatWZbTFZ2PQMN212t3eQ.jpeg"></section>
+				</section> -->
+				<section><img data-src="https://miro.medium.com/max/1848/1*gJHmiQDd61_hRG23Nk8-VA.png"></section>
+				<section>
+					<section>
+						<h2>Stateful and stateless components in react</h2>
+						<p>Stateful/Container component:</p>
+						<pre>
+							<code data-trim data-line-numbers="1-11">
+								class Main extends Component {
+									constructor() {
+									  super()
+									  this.state = {
+										books: []
+									  }
+									}
+									render() {
+									  <BooksList books={this.state.books} />
+									}
+								   }
+							</code>
+						</pre>
+					</section>
+					<section>
+						<p>Stateless/Presentational component:</p>
+						<pre>
+							<code data-trim data-line-numbers="1-9">
+								const BooksList = ({books}) => {
+									return (
+									  <ul>
+										{books.map(book => {
+										  return <li>book</li>
+										})}
+									  </ul>
+									)
+								   }
+							</code>
+						</pre>
+					</section>
+				</section>
+
+					<section>
+							<aside class="notes">
+									Let’s recap what happens in this example
+										We call ReactDOM.render() with the <Welcome name="Sara" /> element.
+										React calls the Welcome component with {name: 'Sara'} as the props.
+										Our Welcome component returns a <Hello, Sara> element as the result.
+										React DOM efficiently updates the DOM to match <Hello, Sara>.
+								</aside>
+						<p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”.</p>
+						<p>For example, this code renders “Hello, Sara” on the page:</p>
+						<pre>
+							<code data-trim data-line-numbers="1-9">
+								function Welcome(props) {
+									return <h1>Hello, {props.name}</h1>;
+									}
+									  
+									const element = <Welcome name="Sara" />;
+									ReactDOM.render(
+									element,
+									document.getElementById('root')
+									);
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<section>
+					<h2>Where you can learn React</h2>
+				</section>
+
+				<section data-background="https://i.ibb.co/dbP8gXn/10.jpg">
+					<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 20px; text-align: left;">
+							<h2>REACT DOCUMENTATION</h2>
+						</div>
+				</section>
+
+				<section  data-background-video="https://dump.video/i/vioWMv.mp4" data-background-video-muted>Huge number of videos on YouTube</section>
+
+				<section data-background-iframe="https://learn.javascript.ru/screencast/react" data-background-interactive>
+					<div style="position: absolute; bottom: 50px; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 20px; text-align: left;">
+						<h2>JavaScript screencast</h2>
+						<p>Small but nicely done screencast can give you the basics of react.</p>
+					</div>
+				</section>
+
+				<section>
+					<section>
+						<h2>Best books for beginners to learn React</h2>
+					</section>
+					<section>	
+						<img data-src="https://images-na.ssl-images-amazon.com/images/I/911c4XAIZ5L.jpg" width="400px" height="500px">
+						<p>Learning React Native: Building Native Mobile Apps with JavaScript
+							by Bonnie Eisenman</p>
+					</section>
+					<section>	
+						<img data-src="https://d2sofvawe08yqg.cloudfront.net/survivejs-react/hero2x?1549459079" width="400px" height="500px">
+						<p>SurviveJS - Webpack and React: From apprentice to master
+							by Juho Vepsäläinen</p>
+					</section>
+					<section>	
+						<img data-src="https://images-na.ssl-images-amazon.com/images/I/51qFp2-OkvL.jpg" width="400px" height="500px">
+						<p>ReactJS Cookbook
+							by Johannes Stein</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Conclusion</h2>
+					<p>Main REACT features</p>
+					<ol>
+						<li>Virtual DOM</li>
+						<li>JSX </li>
+						<li>Component-Based</li>
+						<li>Strong Community</li>
+						<li>Simplicity</li>
+					</ol>
+				</section>
+				<!-- <section>
+						<pre>
+							<code class="hljs" data-trim data-line-numbers="1-4">
+								ReactDOM.render(
+									<h1>Привет, мир!</h1>,
+									document.getElementById('root')
+								  );
+								
+							</code>
+						</pre>
+					</section> -->
+
+					<section>
+						<p>Thank you for your attention</p>
+						<img data-src="https://miro.medium.com/max/600/1*82qV9Jm5LEZVJ0qDBemRZA.png">
+					</section>
+					<!-- <section>
+						<pre>
+							<code class="hljs" data-trim data-line-numbers="4,8-11">
+						import React, { useState } from 'react';
+						
+						function Example() {
+						  const [count, setCount] = useState(0);
+						
+						  return (
+							&lt;div&gt;
+							  &lt;p&gt;You clicked {count} times&lt;/p&gt;
+							  &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+								Click me
+							  &lt;/button&gt;
+							&lt;/div&gt;
+						  );
+						}
+						</code></pre>
+										
+					</section> -->
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
